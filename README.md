@@ -41,19 +41,20 @@ ufw allow 443
 ufw allow 2078 (Zesle port)
 ufw enable
 ```
-In Zesle, first create SSH keys in the admin panel. Then proceed, disabling password login:
+In Zesle, first create your SSH keys in the admin panel. Follow the Zesle tutorial on on todo that (easy). 
+Then proceed, disabling password login:
 ```
-vi /etc/ssh/sshd_config
+nano /etc/ssh/sshd_config
 PasswordAuthentication no
 systemctl reload sshd
 ```
-More security hardening.
+More security hardening. (optional)
 ```
-vi /etc/fstab tmpfs /run/shm tmpfs defaults,noexec,nosuid 0 0
+nano /etc/fstab tmpfs /run/shm tmpfs defaults,noexec,nosuid 0 0
 ```
-Sample config for hardening:
+Sample config for hardening (optional)
 ```
-vi /etc/sysctl.conf
+nano /etc/sysctl.conf
 
 #IP Spoofing protection
 net.ipv4.conf.all.rp_filter = 1
