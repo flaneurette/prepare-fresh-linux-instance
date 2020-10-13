@@ -25,7 +25,7 @@ timedatectl set-timezone UTC
 ```
 Install Zesle.
 ```
-cd /home && sudo curl -o latest -L http://release.zeslecp.com/latest && sudo sh latest
+cd /home && sudo curl -o latest -L http://release.zeslecp.com/latest-v3-beta && sudo sh latest
 ```
 Run update.
 ```
